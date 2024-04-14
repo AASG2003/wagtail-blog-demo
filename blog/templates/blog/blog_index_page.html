@@ -4,10 +4,10 @@
 
 {% load static%}
 {% block extra_css%}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
     {% load bootstrap5 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
 {% endblock %}
 
 {% block body_class %}template-blogindexpage{% endblock %}
@@ -15,13 +15,21 @@
 {% block content %}
     <div class="blog-content">
         <div class="intro">{{ page.intro|richtext }}</div>
+        <div class="description">{{ page.description|richtext }}</div>
     </div>
     
-
+    
     {% for post in page.get_children %}
-        <h2><a href="{% pageurl post %}">{{ post.title }}</a></h2>
-        {{ post.specific.intro }}
-        {{ post.specific.body|richtext }}
+        <div class="card">
+            <div class="card-header">
+                {{ post.title }}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ post.specific.intro }}</h5>
+                <p class="card-text">{{ post.specific.body|richtext }}</p>
+                <a href="{% pageurl post %}" class="btn btn-primary">Mas</a>
+            </div>
+        </div>
     {% endfor %}
 
 {% endblock %}

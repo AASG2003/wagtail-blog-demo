@@ -1,23 +1,40 @@
+/* estilos del blog */
 .blog-content{
     background-color: #5e5fa883;
+    border-radius: 20px;
     padding: 5%;
     align-items: center;
+    margin-bottom: 2%;
 }
 
 .body-style{
+    flex:1;
     /* background-color: #ffffff; */
     align-items: center;
     padding: 2%
 }
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* estilos del navbar */
+
 .nav-style{
     background-color:#5e5fa8;
+    padding: 3%;
+    font-size: 25px;
 }
+
+/* estilos del footer */
 
 footer {
     background-color: #ddf0f8;
     padding: 20px 0;
     text-align: center;
-    position: fixed;
+    position: sticky;
     bottom: 0;
     width: 100%;
 }
@@ -40,4 +57,41 @@ footer {
 .social-icons img {
     width: 30px;
     height: 30px;
+}
+
+.intro{
+    font-size: 25px;
+}
+
+/* estilos post */
+.posts{
+    background-color: #5e5fa883;
+    border-radius: 20px;
+    padding: 5%;
+    align-items: center;
+}
+
+.card{
+    border-radius: 20px;
+    margin-bottom: 2%;
+    background: rgb(220,221,232);
+    background: radial-gradient(circle, rgba(220,221,232,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+/* post estilos */
+.post-info{
+    border-radius: 25px;
+    padding: 5%;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+.btn-primary{
+    background-color: #5e5fa883;
+    border-color: #5e5fa883;
+}
+
+.btn-primary:hover {
+    background-color: #5e5fa883;
+    border-color: #5e5fa883;
 }

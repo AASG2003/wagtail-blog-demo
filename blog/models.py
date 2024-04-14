@@ -6,9 +6,10 @@ from wagtail.search import index
 
 class BlogIndexPage(Page):
     intro = RichTextField(blank=True)
-
+    description = RichTextField(blank=True)
     content_panels = Page.content_panels + [
-        FieldPanel('intro')
+        FieldPanel('intro'),
+        FieldPanel('description')
     ]
 
 class BlogPage(Page):
