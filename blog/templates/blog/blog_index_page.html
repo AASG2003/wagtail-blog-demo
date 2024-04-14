@@ -1,13 +1,22 @@
-{% extends "base.html" %}
+{% extends "blog/base.html" %}
 
 {% load wagtailcore_tags %}
+
+{% load static%}
+{% block extra_css%}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+{% endblock %}
 
 {% block body_class %}template-blogindexpage{% endblock %}
 
 {% block content %}
-    <h1>{{ page.title }}</h1>
-
-    <div class="intro">{{ page.intro|richtext }}</div>
+    <div class="blog-content">
+        <div class="intro">{{ page.intro|richtext }}</div>
+    </div>
+    
 
     {% for post in page.get_children %}
         <h2><a href="{% pageurl post %}">{{ post.title }}</a></h2>

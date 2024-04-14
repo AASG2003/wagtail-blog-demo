@@ -1,7 +1,13 @@
-{% extends "base.html" %}
+{% extends "blog/base.html" %}
 
 {% load wagtailcore_tags %}
-
+{% load static%}
+{% block extra_css%}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+{% endblock %}
 {% block body_class %}template-blogpage{% endblock %}
 
 {% block content %}
