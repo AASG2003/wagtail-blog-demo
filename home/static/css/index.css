@@ -1,0 +1,40 @@
+/* styles.css */
+
+/* Estilos generales del navbar */
+.navbar {
+    background-color: #333; /* Color de fondo del navbar */
+    overflow: hidden;
+}
+
+/* Estilos para los enlaces del navbar */
+.navbar a {
+    float: left; /* Alinear los enlaces a la izquierda */
+    display: block; /* Convertir los enlaces en bloques */
+    color: #f2f2f2; /* Color del texto */
+    text-align: center; /* Alinear el texto al centro */
+    padding: 14px 16px; /* Espaciado interior */
+    text-decoration: none; /* Quitar subrayado de los enlaces */
+}
+
+/* Cambiar color del enlace cuando se pasa el mouse por encima */
+.navbar a:hover {
+    background-color: #ddd; /* Color de fondo al pasar el mouse */
+    color: black; /* Cambiar color del texto */
+}
+
+/* Estilos para la imagen del centro del navbar */
+.navbar img {
+    display: block; /* Convertir la imagen en un bloque */
+    margin: 0 auto; /* Centrar la imagen horizontalmente */
+    max-width: 100%; /* Establecer ancho máximo de la imagen */
+    height: auto; /* Mantener la proporción de la imagen */
+}
+
+/* Estilos para hacer el navbar responsive */
+@media screen and (max-width: 600px) {
+    .navbar a {
+        float: none; /* Cancelar la alineación de los enlaces */
+        display: block; /* Convertir los enlaces en bloques */
+        text-align: center; /* Alinear el texto al centro */
+    }
+}
